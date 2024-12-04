@@ -220,7 +220,7 @@ services:
     depends_on:
       opencti:
         condition: service_healthy
-    connector-alienvault:
+  connector-alienvault:
     image: opencti/connector-alienvault:6.4.2
     environment:
       - OPENCTI_URL=http://opencti:8080
