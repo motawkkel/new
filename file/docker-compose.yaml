@@ -254,6 +254,9 @@ services:
       - ALIENVAULT_X_OPENCTI_SCORE_MUTEX=60
       - ALIENVAULT_X_OPENCTI_SCORE_CRYPTOCURRENCY_WALLET=80
     restart: always
+    depends_on:
+      opencti:
+        condition: service_healthy
 
 volumes:
   esdata:
