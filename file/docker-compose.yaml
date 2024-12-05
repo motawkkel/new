@@ -250,7 +250,7 @@ services:
       - CONNECTOR_RUN_AND_TERMINATE=false
       - CONNECTOR_LOG_LEVEL=error
       - MITRE_REMOVE_STATEMENT_MARKING=true
-      - MITRE_INTERVAL=7 # In days
+      - MITRE_INTERVAL=30 # In days
     restart: always
     depends_on:
       opencti:
@@ -292,7 +292,7 @@ services:
       - CONNECTOR_EXPOSE_METRICS=false
       - KASPERSKY_API_ROOT=https://taxii.tip.kaspersky.com/v2/
       - KASPERSKY_API_TOKEN=sYTNi5MkTQ6H2MB4b28jLA==
-      - KASPERSKY_INITIAL_HISTORY=604800 # 7 days in seconds
+      - KASPERSKY_INITIAL_HISTORY=2592000 # 30 days in seconds
       - KASPERSKY_UPDATE_INTERVAL=3600 # 1 hour in seconds
     restart: always
     depends_on:
